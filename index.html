@@ -4,11 +4,36 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Document</title>
+        <title>WarpathWarriors</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+        </style>
     </head>
-    <body>
-        <canvas>
-        </canvas>
+    <body style="margin: 0; padding: 0; overflow: hidden; height: 100%;">
+        <div style="position: relative; display: inline-block;">
+            <div
+                style="position: absolute; display: flex; width: 100%; align-items: center; padding: 20px;">
+                <!-- player health -->
+                <div
+                    style="background-color: yellow; height: 30px; width: 100%;"></div>
+                <!-- timer -->
+                <div
+                    style="background-color: white; height: 100px; width: 100px; flex-shrink: 0;"></div>
+
+                <!-- enemy health -->
+                <div
+                    style="position: relative; width: 100%; border-top: 4px solid white; border-bottom: 4px solid white; border-right: 4px solid white;">
+                    <div style="background-color: red; height: 30px"></div>
+                    <div
+                        id="enemyHealth"
+                        style="position: absolute; background: green; top: 0; right: 0; bottom: 0; left: 0;"></div>
+                </div>
+                <div></div>
+            </div>
+            <canvas></canvas>
+        </div>
         <script src="index.js"></script>
     </body>
 </html>

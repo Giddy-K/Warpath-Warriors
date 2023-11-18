@@ -1,8 +1,13 @@
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 
-canvas.width = 1024;
-canvas.height = 576;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
 
 c.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -26,6 +31,7 @@ class Sprite {
     };
     this.color = color || "red";
     this.isAttacking;
+    this.health = 100
   }
 
   draw() {
@@ -144,7 +150,9 @@ function animate() {
     player.isAttacking
   ) {
     player.isAttacking = false;
-    console.log("Player is attacking");
+    console.log("Enemy is attacking");
+    enemy.health -= 5
+    document.querySelector('#enemyHealth').style.width = enemy.health + '%';
   }
 
   //Detect for a collusion for player
