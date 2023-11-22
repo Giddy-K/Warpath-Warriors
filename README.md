@@ -24,8 +24,9 @@ Warpath Warriors is an adrenaline-fueled 2D fighting game that combines intense 
 
 ### Getting Started
 
-1. Clone the repository: `git clone https://github.com/yourusername/Warpath-Warriors.git`
-2. [Additional installation steps, if any]
+1. Clone the repository: `https://github.com/Giddy-K/Warpath-Warriors.git`
+`
+1. [Additional installation steps, if any]
 
 ## Usage
 
