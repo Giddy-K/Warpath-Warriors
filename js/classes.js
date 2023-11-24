@@ -8,16 +8,14 @@ class Sprite {
     }
   
     draw() {
-      c.drawImage(this.image, this.position.x, this.position.y)
+      c.drawImage(this.image,0,0, canvas.width, canvas.height)
     }
   
     update() {
       this.draw();
-     
     }
   }
 
-  
   class Fighter {
     constructor({ position, velocity, color, offSet }) {
       this.position = position;
@@ -63,7 +61,7 @@ class Sprite {
       this.position.x += this.velocity.x;
       this.position.y += this.velocity.y;
   
-      if (this.position.y + this.height + this.velocity.y >= canvas.height) {
+      if (this.position.y + this.height + this.velocity.y >= canvas.height - 109) {
         this.velocity.y = 0;
       } else this.velocity.y += gravity;
     }
