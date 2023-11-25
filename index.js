@@ -38,6 +38,9 @@ const player = new Fighter({
     x: 0,
     y: 0,
   },
+  imageSrc: './imgs/samuraiMack/Idle.png',
+  framesMax: 8,
+  scale: 2.5
 });
 
 player.draw();
